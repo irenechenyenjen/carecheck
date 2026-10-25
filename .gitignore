@@ -4,3 +4,9 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .DS_Store
+
+# Submitted separately from the app repository
+report.html
+slides.html
+carecheck-input.png
+carecheck-result.png
