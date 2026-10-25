@@ -28,10 +28,4 @@ The app supports both approved key names: `PORTKEY_API_KEY` and `OPENAI_API_KEY`
 
 The app is designed to run locally without a database or additional service. If no API key is available, its local fallback still renders the interface and provides a limited safety-screening response.
 
-## Submission documents
-
-- `report.html` — report draft with confirmed product details and clearly marked `[TO COMPLETE]` evidence fields.
-- `slides.html` — ten-slide Reveal.js presentation draft.
-
-Before submission, replace every `[TO COMPLETE]` item with real screenshots, testing evidence, user feedback, cost/token records, names, dates, and links. Do not invent evidence.
 
