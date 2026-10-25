@@ -1,0 +1,42 @@
+/* Single final CareCheck visual system. Palette: ivory, navy, terracotta, slate. */
+:root { --navy:#173b52; --navy2:#0e2d40; --terra:#ad6847; --slate:#65747d; --ivory:#f3efe7; --white:#fffdf8; --line:#87939a; }
+body,.app-shell { background:var(--ivory) !important; color:var(--navy) !important; font-family:'DM Sans',Arial,sans-serif !important; }
+.app-shell { background-image:radial-gradient(ellipse 30rem 21rem at 8% 12%,rgba(23,59,82,.13) 0%,rgba(23,59,82,.13) 62%,transparent 63%),radial-gradient(circle 14rem at 88% 22%,rgba(173,104,71,.11) 0%,rgba(173,104,71,.11) 62%,transparent 63%),radial-gradient(ellipse 25rem 18rem at 20% 82%,rgba(113,141,157,.12) 0%,rgba(113,141,157,.12) 62%,transparent 63%),radial-gradient(circle 18rem at 88% 78%,rgba(173,104,71,.10) 0%,rgba(173,104,71,.10) 62%,transparent 63%),radial-gradient(circle 8rem at 52% 34%,rgba(23,59,82,.06) 0%,rgba(23,59,82,.06) 62%,transparent 63%),radial-gradient(ellipse 11rem 7rem at 70% 61%,rgba(173,104,71,.055) 0%,rgba(173,104,71,.055) 62%,transparent 63%) !important; background-color:var(--ivory) !important; background-size:100% 100% !important; background-repeat:no-repeat !important; }
+.app-shell { background-image:radial-gradient(ellipse 30rem 21rem at 8% 12%,rgba(16,72,105,.24) 0%,rgba(16,72,105,.24) 62%,transparent 63%),radial-gradient(circle 14rem at 88% 22%,rgba(214,91,54,.22) 0%,rgba(214,91,54,.22) 62%,transparent 63%),radial-gradient(ellipse 25rem 18rem at 20% 82%,rgba(53,125,154,.20) 0%,rgba(53,125,154,.20) 62%,transparent 63%),radial-gradient(circle 18rem at 88% 78%,rgba(214,91,54,.18) 0%,rgba(214,91,54,.18) 62%,transparent 63%),radial-gradient(circle 8rem at 52% 34%,rgba(16,72,105,.15) 0%,rgba(16,72,105,.15) 62%,transparent 63%),radial-gradient(ellipse 11rem 7rem at 70% 61%,rgba(214,91,54,.14) 0%,rgba(214,91,54,.14) 62%,transparent 63%) !important; background-color:#f4eee3 !important; background-size:100% 100% !important; background-repeat:no-repeat !important; }
+.app-shell .primary-button { background:#104869 !important; border-color:#104869 !important; }
+.app-shell .secondary-button { color:#104869 !important; border-color:#104869 !important; }
+.app-shell .eyebrow { color:#c64f31 !important; }
+.app-shell .claim-panel { border-top-color:#104869 !important; }
+.app-shell .result-card { background:#dcecf3 !important; border-left-color:#104869 !important; }
+.topbar { background:#faf8f2 !important; border-bottom:2px solid var(--line) !important; }
+.logo-mark { background:var(--navy) !important; color:#fff !important; }
+.brand,h1,h2,h3,.section-title,.result-title { color:var(--navy) !important; }
+.header-note,.muted,.lede,.result-block p,.sources-block li { color:#344953 !important; }
+.eyebrow { color:var(--terra) !important; }
+.hero-note { display:none !important; }
+.hero-grid { grid-template-columns:1fr !important; }
+.panel,.result-card,.empty-result { background:var(--white) !important; border:2px solid var(--line) !important; border-radius:10px !important; box-shadow:0 5px 16px #173b5212 !important; }
+.claim-panel { border-top:6px solid var(--navy) !important; }
+.claim-panel::after { display:none !important; }
+.claim-panel::before { background:#e6e9e8 !important; color:var(--navy) !important; }
+.claim-panel::after { border-color:#bac2c5 !important; box-shadow:0 0 0 18px var(--ivory),0 0 0 19px #bac2c5 !important; }
+.claim-panel .section-heading { border-left:5px solid var(--terra) !important; }
+.claim-input { background:#fff !important; color:var(--navy) !important; border:2px solid var(--line) !important; }
+.claim-input:focus { border-color:var(--navy) !important; box-shadow:0 0 0 3px #ccd8de !important; }
+button.primary-button { background:var(--navy) !important; border:2px solid var(--navy) !important; color:#fff !important; }
+button.secondary-button { background:var(--white) !important; color:var(--navy) !important; border:2px solid var(--navy) !important; }
+.action-row,.tool-note { border-top:1px solid var(--line) !important; }
+.result-card { background:#e5edf1 !important; border:2px solid #718d9d !important; border-left:8px solid var(--navy) !important; box-shadow:0 7px 18px #173b521b !important; }
+.result-card .result-header { border-bottom:1px solid var(--line) !important; }
+.result-block,.sources-block { background:#eef1f1 !important; border:1px solid var(--line) !important; }
+.result-block::before { background:var(--terra) !important; }
+.sources-block { border-left:5px solid var(--slate) !important; }
+.risk-badge.caution { background:var(--terra) !important; color:#fff !important; }
+.safety-panel { background:transparent !important; border:0 !important; border-radius:0 !important; box-shadow:none !important; padding:14px 0 0 !important; color:#344953 !important; }
+.safety-panel::before { display:none !important; }
+.safety-panel .eyebrow { font-size:11px !important; margin-bottom:5px !important; }
+.safety-note { font-size:14px !important; color:#344953 !important; }
+.hero-copy::before { color:var(--navy) !important; border-color:var(--slate) !important; }
+.hero-copy::after { background:#e4e8e9 !important; border-color:var(--slate) !important; color:var(--navy) !important; box-shadow:26px 18px 0 -10px #d7dcdd,52px 30px 0 -20px #c5cdd0 !important; }
+.hero-copy::after { display:none !important; }
+footer { border-top:2px solid var(--line) !important; color:#344953 !important; }

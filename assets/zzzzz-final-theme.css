@@ -1,0 +1,29 @@
+/* Final palette lock: remove the remaining hard-coded green accents. */
+.hero-copy::before { border-color:#9aaeb9 !important; color:#173b52 !important; }
+.claim-panel { border-top-color:#173b52 !important; }
+.claim-panel::after { border-color:#d7d9d5 !important; box-shadow:0 0 0 18px #f7f4ee,0 0 0 19px #d9e0e2 !important; }
+.action-row { border-top-color:#d9d9d3 !important; }
+.safety-panel::before { border-color:#173b52 !important; color:#173b52 !important; }
+.claim-panel::before { background:#edf0f1 !important; color:#173b52 !important; }
+.result-block::before { background:#b47755 !important; }
+.tool-note { border-top-color:#d9d9d3 !important; }
+.hero-copy::after { background:#edf0f1 !important; border-color:#718d9d !important; color:#173b52 !important; box-shadow:26px 18px 0 -10px #e3e3de,52px 30px 0 -20px #d9e0e2 !important; }
+.hero-note { border-color:#b47755 !important; background:#f7f4ee !important; }
+.safety-panel { background:#edf0f1 !important; border-color:#9aaeb9 !important; }
+.safety-panel, .safety-panel::before, .claim-panel, .result-card, .empty-result, .panel, .result-block, .sources-block { border-color:#c8d0d2 !important; }
+.safety-panel::before { border-color:#173b52 !important; }
+/* Global border reset: no green rules remain anywhere in the interface. */
+.app-shell * { border-color:#7d8990 !important; outline-color:#7d8990 !important; }
+.app-shell *::before, .app-shell *::after { border-color:#7d8990 !important; }
+.app-shell .claim-panel { border-top-color:#173b52 !important; }
+.app-shell .claim-panel .section-heading { border-left-color:#b47755 !important; }
+.app-shell .result-card { border-left-color:#b47755 !important; }
+.app-shell .sources-block { border-left-color:#718d9d !important; }
+.app-shell .action-row, .app-shell .tool-note { border-top-color:#7d8990 !important; }
+.app-shell .hero-copy::after { box-shadow:26px 18px 0 -10px #d5d9d9,52px 30px 0 -20px #c1c9cd !important; }
+.app-shell .claim-panel::after { box-shadow:0 0 0 18px #f1eee8,0 0 0 19px #c1c9cd !important; }
+.app-shell .safety-panel { background:#e1e5e6 !important; border-color:#7d8990 !important; }
+.app-shell .primary-button { border-color:#173b52 !important; }
+.app-shell .secondary-button { border-color:#718d9d !important; }
+.app-shell .hero-copy::after { border-color:#718d9d !important; }
+.app-shell .safety-panel::before { border-color:#173b52 !important; }

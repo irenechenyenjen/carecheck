@@ -1,0 +1,10 @@
+.claim-panel::before { content:"1  PASTE     2  PAUSE     3  UNDERSTAND"; display:block; width:max-content; margin:0 0 28px; padding:8px 12px; border-radius:5px; background:#edf3ee; color:#2f6654; font-size:11px; font-weight:700; letter-spacing:.1em; }
+.claim-panel .section-heading { border-left:4px solid #69899a; padding-left:18px; }
+.result-card { background:linear-gradient(135deg,#fff 0%,#fbfcfa 100%); }
+.result-card .result-header { padding-bottom:15px; border-bottom:1px solid #dfe7e1; }
+.result-block { position:relative; padding-top:24px; }
+.result-block::before { content:""; position:absolute; top:0; left:20px; width:36px; height:3px; background:#6e8d7e; border-radius:3px; }
+.sources-block { background:#f2f6f3; border-left:4px solid #69899a; }
+.tool-note { padding-top:14px; border-top:1px solid #e1e8e2; }
+.safety-panel { margin-top:34px; }
+@media(max-width:720px) { .claim-panel::before { font-size:10px; letter-spacing:.04em; } }

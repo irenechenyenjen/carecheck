@@ -1,0 +1,32 @@
+/* Loaded last so the accessible CareCheck design overrides the starter theme. */
+@import url('accessible-theme.css');
+body { background:#f1ede5 !important; }
+.app-shell { background:#f1ede5 !important; }
+.topbar { background:#faf8f3 !important; }
+.page { background:transparent !important; }
+.panel,.result-card,.empty-result { background:#fffefa !important; }
+.safety-panel { background:#e8ece9 !important; }
+.logo-mark { background:#173b52 !important; }
+.brand,.hero-copy h1,.section-title,.result-title { color:#173b52 !important; }
+.eyebrow { color:#8c5b42 !important; }
+.hero-copy::before { color:#173b52 !important; border-color:#9db0bb !important; background:#edf1f2; }
+.hero-copy::after { background:#edf1f2; border-color:#718d9d; color:#173b52; }
+.claim-panel { border-top-color:#173b52 !important; }
+.claim-panel .section-heading { border-left-color:#b47755 !important; }
+.primary-button { background:#173b52 !important; border-color:#173b52 !important; }
+.primary-button:hover { background:#0f2b3b !important; }
+.secondary-button { color:#173b52 !important; border-color:#718d9d !important; }
+.result-card { border-left-color:#b47755 !important; }
+.result-block::before { background:#b47755 !important; }
+.sources-block { border-left-color:#718d9d !important; }
+:root { --sage:#173b52 !important; --sage-dark:#173b52 !important; --green:#173b52 !important; --pink:#173b52 !important; --pink-soft:#173b52 !important; --warning:#b47755 !important; }
+.status,.safety-panel::before,.capacity-note { color:#173b52 !important; }
+.hero-note,.safety-panel { border-color:#b47755 !important; }
+.safety-panel::before { border-color:#173b52 !important; }
+.claim-panel::before { color:#173b52 !important; background:#edf1f2 !important; }
+.settings-button,.ghost-button { color:#173b52 !important; border-color:#718d9d !important; }
+.hero-note { display:none !important; }
+.hero-grid { grid-template-columns:1fr !important; }
+.hero-copy { position:relative; padding-bottom:88px; }
+.hero-copy::after { content:"✓"; position:absolute; left:10px; bottom:12px; width:112px; height:72px; display:grid; place-items:center; border-radius:18px 18px 18px 5px; background:#e7f0ea; border:2px solid #7c9d8c; color:#2f6654; font-size:34px; font-weight:700; box-shadow:26px 18px 0 -10px #d9e6de, 52px 30px 0 -20px #cbded3; }
+.hero-copy::after { text-shadow:0 1px 0 #fff; }

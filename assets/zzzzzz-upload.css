@@ -1,0 +1,11 @@
+.upload-panel { margin:0 auto 24px; max-width:1080px; padding:0 5vw; }
+.image-upload { display:flex; align-items:center; justify-content:center; min-height:76px; border:2px dashed #718d9d !important; border-radius:9px; background:#e5edf1; color:#173b52; cursor:pointer; font-size:17px; }
+.image-upload span { margin-left:5px; color:#344953; }
+.upload-help { margin:8px 0 0; color:#344953; font-size:14px; }
+.claim-panel .upload-panel { max-width:none; margin:22px 0 0; padding:0; }
+.claim-panel .upload-panel .eyebrow { margin-bottom:8px; }
+.claim-panel .upload-panel .image-upload { min-height:54px; border:0 !important; border-top:1px solid #87939a !important; border-radius:0; justify-content:flex-start; background:transparent; color:#173b52; font-size:14px; }
+.claim-panel .upload-panel .upload-help { margin-top:0; font-size:13px; }
+.claim-panel .upload-panel { border-top:1px solid #87939a; padding-top:8px; }
+.claim-panel .upload-panel::before { content:"You can also paste an image directly into the message box above."; display:block; color:#344953; font-size:13px; margin-bottom:7px; }
+.claim-panel .upload-panel .image-upload { border-top:0 !important; min-height:44px; }

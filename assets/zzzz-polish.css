@@ -1,0 +1,15 @@
+/* Quiet visual polish without adding interaction complexity. */
+.topbar { box-shadow:0 1px 0 rgba(31,61,48,.03); }
+.page { padding-bottom:110px; }
+.hero-copy { max-width:850px; }
+.hero-copy::before { content:"CARECHECK"; display:inline-block; margin-bottom:18px; padding:6px 10px; border:1px solid #9bb5a6; border-radius:5px; color:#2f6654; font-size:11px; font-weight:700; letter-spacing:.14em; }
+.claim-panel { position:relative; overflow:hidden; border-top:5px solid #2f6654; }
+.claim-panel::after { content:""; position:absolute; right:-44px; top:-52px; width:150px; height:150px; border:1px solid #d1dfd5; border-radius:50%; box-shadow:0 0 0 18px #f5f8f4,0 0 0 19px #dfe9e1; pointer-events:none; }
+.claim-panel .section-heading { position:relative; z-index:1; }
+.action-row { border-top:1px solid #e1e8e2; padding-top:18px; }
+.result-wrapper { position:relative; }
+.result-wrapper::before { content:""; display:block; width:52px; height:4px; border-radius:3px; background:#69899a; margin:0 0 16px 4px; }
+.empty-result { background:#fff; }
+.safety-panel { position:relative; padding-left:76px; }
+.safety-panel::before { content:"i"; position:absolute; left:29px; top:28px; width:29px; height:29px; display:grid; place-items:center; border:2px solid #2f6654; border-radius:50%; color:#2f6654; font-weight:700; font-family:Georgia,serif; }
+@media(max-width:720px) { .claim-panel::after { right:-72px; } .safety-panel { padding-left:60px; } .safety-panel::before { left:22px; } }

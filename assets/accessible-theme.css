@@ -1,0 +1,34 @@
+/* Accessible senior-friendly theme: high contrast, calm, and low visual noise. */
+:root { --ink:#172923; --muted:#40574e; --bg:#f7f7f3; --card:#ffffff; --sage:#2f6654; --sage-dark:#204a3b; --blue:#174f68; --line:#b9c8c0; --warning:#8a4b22; }
+body { color:var(--ink); background:#f7f7f3; font-size:17px; }
+.app-shell { background:#f7f7f3; }
+.topbar { border-bottom:2px solid var(--line); background:#fff; }
+.logo-mark { background:var(--sage-dark); width:38px; height:38px; font-size:21px; }
+.brand { font-size:24px; color:var(--ink); }
+.header-note { color:var(--muted); font-size:15px; }
+.page { max-width:1080px; padding-top:52px; }
+.hero-grid { margin-bottom:38px; }
+.eyebrow { color:var(--blue); font-size:13px; letter-spacing:.09em; }
+h1 { font:700 clamp(38px,5vw,62px)/1.12 'DM Sans',sans-serif; letter-spacing:-.045em; color:var(--ink); }
+.lede { color:var(--ink); font-size:21px; line-height:1.6; }
+.hero-note { border-left:5px solid var(--sage); color:var(--ink); font-size:16px; background:#e9f0ec; padding:20px; }
+.panel,.result-card,.empty-result,.safety-panel { border:2px solid var(--line); border-radius:10px; background:#fff; box-shadow:none; padding:32px; }
+.section-title { color:var(--ink); font-size:30px; }
+.muted { color:var(--muted); font-size:17px; }
+.claim-input { border:2px solid #71867b; border-radius:7px; min-height:190px; font-size:19px; padding:19px; }
+.claim-input:focus { border-color:var(--blue); box-shadow:0 0 0 4px #cfe0e7; }
+button { border-radius:7px; font-size:17px; min-height:52px; padding:13px 22px; }
+.primary-button { background:var(--sage-dark); border:2px solid var(--sage-dark); }
+.primary-button:hover { background:#153c30; }
+.secondary-button { color:var(--blue); border:2px solid var(--blue); background:#fff; }
+.result-card { border-left:8px solid var(--warning); }
+.result-title { font:700 29px/1.25 'DM Sans',sans-serif; color:var(--ink); }
+.result-summary { color:var(--ink); font-size:19px; line-height:1.6; }
+.result-block,.sources-block { border:1px solid var(--line); background:#f5f8f5; border-radius:7px; padding:20px; }
+.result-block h3,.sources-block h3 { color:var(--ink); font-size:19px; }
+.result-block p,.sources-block li { color:var(--ink); font-size:17px; }
+.risk-badge.caution { color:#fff; background:var(--warning); font-size:14px; padding:9px 13px; }
+.safety-panel { background:#e8f0eb; border-color:#7c9d8c; }
+.safety-note { color:var(--ink); font-size:17px; }
+footer { border-top:2px solid var(--line); color:var(--muted); font-size:14px; }
+@media(max-width:720px) { .topbar { padding-top:20px; padding-bottom:20px; } .header-note { font-size:14px; } .page { padding-top:35px; } .panel,.result-card,.empty-result,.safety-panel { padding:24px; } .action-row { gap:12px; } .action-row button { width:100%; } }
