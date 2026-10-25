@@ -35,7 +35,7 @@ def analyze_claim(text: str) -> dict:
             client = OpenAI(**client_kwargs)
             response = client.responses.create(
                 model=os.getenv("CARECHECK_MODEL", "gpt-6-luna"),
-                input=[{"role":"system", "content":"You are CareCheck, a cautious health-information checker for older adults. Do not diagnose. Analyze the user's claim and cite trustworthy sources such as CDC, NIH, NHS, WHO, or major medical associations. You MUST set level to exactly one of: High caution, Mostly correct, Looks useful, Needs checking, Unable to verify. Use Mostly correct when the advice is broadly right but needs context or an important safety addition. Use High caution only when the advice is false, dangerous, or could cause harmful delay or treatment changes. Return JSON with keys level, summary, why, next_step, sources (array), tool. Keep it warm, plain English, and concise."}, {"role":"user", "content":text}],
+                input=[{"role":"system", "content":"You are CareCheck, a cautious health-information checker for older adults. Do not diagnose. Analyze the user's claim and cite trustworthy sources such as CDC, NIH, NHS, WHO, or major medical associations. You MUST set level to exactly one of: High caution, Mostly correct, Looks useful, Needs checking. Use Needs checking when the claim is uncertain or cannot be verified. Use Mostly correct when the advice is broadly right but needs context or an important safety addition. Use High caution only when the advice is false, dangerous, or could cause harmful delay or treatment changes. Return JSON with keys level, summary, why, next_step, sources (array), tool. Keep it warm, plain English, and concise."}, {"role":"user", "content":text}],
             )
             parsed = json.loads(response.output_text)
             # Do not let a variable model response downplay an obvious exposure hazard.
@@ -53,7 +53,7 @@ def analyze_claim(text: str) -> dict:
                 elif "mostly correct" in normalized or "mostly true" in normalized or "partly correct" in normalized or "generally correct" in normalized or "generally_correct" in normalized or "generally true" in normalized:
                     parsed["level"] = "Mostly correct"
                 elif normalized in {"uncertain", "unknown", "cannot verify", "unable to verify"}:
-                    parsed["level"] = "Unable to verify"
+                    parsed["level"] = "Needs checking"
             parsed["tool"] = parsed.get("tool", "Evidence review")
             return parsed
         except Exception as error:
@@ -132,8 +132,6 @@ def show_result(_, claim):
         result_title = "Be careful with this advice."
     elif result.get("level") == "Looks useful":
         result_title = "This looks useful."
-    elif result.get("level") == "Unable to verify":
-        result_title = "I could not verify this."
     else:
         result_title = "This needs a little more checking."
     return html.Div([html.Div([html.P("2  ·  LET'S LOOK AT IT TOGETHER", className="eyebrow"), html.Span(result["level"], className="risk-badge caution")], className="result-header"), html.H2(result_title, className="result-title"), html.P(result["summary"], className="result-summary"), html.Div([html.Div([html.H3("Why I’m suggesting a pause"), html.P(result["why"])], className="result-block"), html.Div([html.H3("What you could do next"), html.P(result["next_step"])], className="result-block")], className="result-grid"), html.Div([html.H3("If you’d like to read more"), html.Ul([html.Li(source) for source in result["sources"]])], className="sources-block"), html.Div([html.Span("Checked with: ", className="muted"), html.Span(result["tool"])], className="tool-note")], className="result-card")
